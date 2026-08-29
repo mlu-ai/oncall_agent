@@ -1,0 +1,31 @@
+# 本机项目配置与凭据
+config/project.json
+config/user.project.json
+.env*
+
+# IDE 与虚拟环境
+.idea/
+.venv/
+
+# JavaScript 构建产物
+node_modules/
+dist/
+coverage/
+
+# Python 与通用缓存
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.pyright/
+.cache/
+
+# 文档与后端运行数据
+docs/.vitepress/cache/
+docs/.vitepress/dist/
+apps/backend/var/
+*.sqlite
+*.sqlite3
+*.db
+*.log

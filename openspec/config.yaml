@@ -1,0 +1,9 @@
+schema: spec-driven
+context: |
+  所有 OpenSpec 工件使用简体中文，工作流为 spec-driven。仓库使用 npm workspaces、VitePress 和 Conventional Commits。
+  后端：Python >=3.10、FastAPI、Pydantic v2、uv、hatchling、src layout、SQLAlchemy 2 async、aiosqlite、Alembic、pytest、pytest-asyncio、Ruff、strict Pyright；pytest asyncio_mode=auto，Ruff line-length=100、target py310、B/E/F/I/UP。
+  后端包为 apps/backend/src/super_ai，包内仅使用 from super_ai...；导入不得连接 SQLite、Milvus、LLM 或 MCP。
+  后续 Agent/AI 提案使用 LangChain 1.x create_agent、LangGraph、langchain-openai、langchain-mcp-adapters、MCP、pymilvus 3、rank-bm25、pypdf、langchain-text-splitters、httpx。
+  前端：Vue 3.5、Vite 6、TypeScript 5.6 strict、Pinia 3、Vue Router 4、Vitest 2、marked、DOMPurify、lucide-vue-next；验收目标为桌面 Web。
+  项目配置只来自本地 JSON 深合并，不读取 OS 环境变量；浏览器只接受 allowlist 字段，绝不进入 LLM、CLS、MCP、MinIO 密钥。
+  Compose 最终只托管 etcd、MinIO、Milvus、Attu、Alertmanager；后端、前端和官方 CLS MCP Server 在主机运行。不要创建 app.Dockerfile、project.compose.json 或应用 Compose 服务。

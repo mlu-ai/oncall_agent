@@ -1,0 +1,11 @@
+{
+  "frontend": {
+    "title": "哨兵前端",
+    "apiBaseUrl": "https://api.example.test",
+    "analytics": { "publicKey": "public-analytics-key" }
+  },
+  "llm": { "apiKey": "FOUNDATION_SENTINEL_SECRET_DO_NOT_BUNDLE" },
+  "cls": { "apiKey": "FOUNDATION_SENTINEL_CLS_SECRET" },
+  "mcp": { "token": "FOUNDATION_SENTINEL_MCP_SECRET" },
+  "minio": { "secretKey": "FOUNDATION_SENTINEL_MINIO_SECRET" }
+}

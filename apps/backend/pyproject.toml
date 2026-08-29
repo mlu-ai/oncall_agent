@@ -1,0 +1,46 @@
+[project]
+name = "super-ai"
+version = "0.1.0"
+description = "Super AI 后端基础骨架"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "aiosqlite>=0.20.0",
+  "alembic>=1.14.0",
+  "fastapi>=0.115.0",
+  "pydantic>=2.9.0",
+  "sqlalchemy[asyncio]>=2.0.0"
+]
+
+[dependency-groups]
+dev = [
+  "httpx>=0.27.0",
+  "pyright>=1.1.390",
+  "pytest>=8.3.0",
+  "pytest-asyncio>=0.24.0",
+  "ruff>=0.8.0"
+]
+
+[build-system]
+requires = ["hatchling>=1.26.0"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/super_ai"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["B", "E", "F", "I", "UP"]
+
+[tool.pyright]
+include = ["src"]
+pythonVersion = "3.10"
+typeCheckingMode = "strict"
+reportMissingTypeStubs = false
